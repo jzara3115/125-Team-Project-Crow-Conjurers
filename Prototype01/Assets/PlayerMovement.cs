@@ -22,37 +22,80 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI ammunitionDisplay;
     public bool allowInvoke = true;
 
+    private Rigidbody rb;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
-    }
 
+        rb = GetComponent<Rigidbody>();
+        if (rb == null)
+        {
+            Debug.LogError("Rigidbody missing from player!");
+        }
+    }
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         yaw = transform.eulerAngles.y;
+
+        if (bullet != null)
+        {
+            Renderer bulletRenderer = bullet.GetComponent<Renderer>();
+            if (bulletRenderer != null)
+            {
+                bulletRenderer.enabled = false;
+            }
+        }
     }
 
     void Update()
     {
+        HandleRotation();
+        MyInput();
+
+        if (ammunitionDisplay != null)
+        {
+            ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        HandleMovement();
+    }
+
+    private void HandleRotation()
+    {
         float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
         yaw += mouseX;
-        transform.rotation = Quaternion.Euler(90f, yaw, 0f);
 
-        //float vertical = Input.GetAxis("Vertical");
-        //Debug.Log(vertical);
-        //Vector3 movementDirection = new Vector3(Mathf.Sin(yaw * Mathf.Deg2Rad), 0, Mathf.Cos(yaw * Mathf.Deg2Rad)) * vertical;
-        pitch += Input.GetAxis("Vertical");
+        float verticalInput = Input.GetAxis("Vertical");
+        pitch += verticalInput;
         pitch = Mathf.Clamp(pitch, -90, 90f);
-        transform.rotation = Quaternion.Euler(pitch/2 + 90f, yaw, 0f);
-        Vector3 movementDirection = new Vector3(Mathf.Sin(yaw * Mathf.Deg2Rad), Mathf.Sin(pitch * Mathf.Deg2Rad) * -1f, Mathf.Cos(yaw * Mathf.Deg2Rad));
-        transform.position += movementDirection * moveSpeed * Time.deltaTime;
-        MyInput();
-        if (ammunitionDisplay != null)
-            ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
+
+        transform.rotation = Quaternion.Euler(pitch / 2 + 90f, yaw, 0f);
+    }
+
+    private void HandleMovement()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Vector3 forwardDirection = new Vector3(
+                Mathf.Sin(yaw * Mathf.Deg2Rad),
+                Mathf.Sin(pitch * Mathf.Deg2Rad) * -1f,
+                Mathf.Cos(yaw * Mathf.Deg2Rad)
+            );
+
+            rb.velocity = forwardDirection.normalized * moveSpeed;
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -71,7 +114,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
         if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
-
 
         if (readyToShoot && shooting)
         {
@@ -103,12 +145,17 @@ public class PlayerMovement : MonoBehaviour
         GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity);
         currentBullet.transform.forward = directionWithSpread.normalized;
 
+        Renderer bulletRenderer = currentBullet.GetComponent<Renderer>();
+        if (bulletRenderer != null)
+        {
+            bulletRenderer.enabled = true;
+        }
+
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
 
-        if(muzzleFlash != null)
+        if (muzzleFlash != null)
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
-
 
         bulletsLeft--;
         bulletsShot++;
@@ -119,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
             allowInvoke = false;
         }
 
-        if(bulletsShot < bulletsPerTap && bulletsLeft > 0)
+        if (bulletsShot < bulletsPerTap && bulletsLeft > 0)
             Invoke("Shoot", timeBetweenShots);
     }
 
@@ -140,6 +187,4 @@ public class PlayerMovement : MonoBehaviour
         bulletsLeft = magazineSize;
         reloading = false;
     }
-
-   
 }
