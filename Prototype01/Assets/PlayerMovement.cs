@@ -36,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
         bulletsLeft = magazineSize;
         readyToShoot = true;
         audioSource = GetComponent<AudioSource>();
-    }
 
         rb = GetComponent<Rigidbody>();
         if (rb == null)
