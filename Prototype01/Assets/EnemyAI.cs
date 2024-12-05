@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class EnemyAI : MonoBehaviour
     private float behaviorTimer;
     private float shootTimer;
     private int currentBehavior;
+
+    private int HP = 100;
+    public Slider healthBar;
 
     void Start()
     {
@@ -64,18 +68,26 @@ public class EnemyAI : MonoBehaviour
             DecideToShoot();
             shootTimer = shootDecisionInterval;
         }
+
+        healthBar.value = HP;
     }
 
     void MoveUpAndDown()
     {
         float newY = behaviorStartPos.y + Mathf.Sin(Time.time * speed) * verticalAmplitude;
-        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        Vector3 newPosition = new Vector3(transform.position.x, newY, transform.position.z);
+
+        FaceDirection(newPosition - transform.position); // Update facing direction
+        transform.position = newPosition;
     }
 
     void MoveLeftAndRight()
     {
         float newX = behaviorStartPos.x + Mathf.Sin(Time.time * speed) * horizontalAmplitude;
-        transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+        Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z);
+
+        FaceDirection(newPosition - transform.position); // Update facing direction
+        transform.position = newPosition;
     }
 
     void FollowPlayer()
@@ -83,7 +95,18 @@ public class EnemyAI : MonoBehaviour
         if (player != null)
         {
             Vector3 direction = (player.position - transform.position).normalized;
+
+            FaceDirection(direction); // Update facing direction
             transform.position += direction * speed * Time.deltaTime;
+        }
+    }
+
+    void FaceDirection(Vector3 direction)
+    {
+        if (direction.magnitude > 0.01f) // Avoid rotating to a zero vector
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
     }
 
@@ -137,7 +160,10 @@ public class EnemyAI : MonoBehaviour
         {
             bulletRb.velocity = direction * bulletSpeed;
         }
-    }
+
+        // Destroy the bullet after 3 seconds
+        Destroy(bullet, 3f);
+}
 
     int GetWeightedRandom(int[] weights)
     {

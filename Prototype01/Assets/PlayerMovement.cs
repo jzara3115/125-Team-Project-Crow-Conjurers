@@ -1,6 +1,5 @@
 using System.Xml.Serialization;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -23,20 +22,12 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI ammunitionDisplay;
     public bool allowInvoke = true;
 
-    private AudioSource audioSource;
-    public AudioClip clip;
-    public AudioClip clip2;
-
-    public ParticleSystem shootParticles;
-
     private Rigidbody rb;
 
     private void Awake()
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
-        audioSource = GetComponent<AudioSource>();
-    }
 
         rb = GetComponent<Rigidbody>();
         if (rb == null)
@@ -133,9 +124,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Shoot()
     {
-        audioSource.PlayOneShot(clip, 0.5f);
-        audioSource.PlayOneShot(clip2, 0.5f);
-
         readyToShoot = false;
 
         Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -166,15 +154,13 @@ public class PlayerMovement : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
 
+        // Destroy the bullet after 3 seconds
+        Destroy(currentBullet, 3f);
+        Debug.Log("Destroying bullet: " + currentBullet.name);
+        Destroy(currentBullet, 3f);
+
         if (muzzleFlash != null)
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
-
-        // Instantiate and play the particle system
-        if (shootParticles != null)
-        {
-            ParticleSystem instantiatedParticles = Instantiate(shootParticles, attackPoint.position, Quaternion.identity);
-            instantiatedParticles.Play();
-        }
 
         bulletsLeft--;
         bulletsShot++;
@@ -187,7 +173,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (bulletsShot < bulletsPerTap && bulletsLeft > 0)
             Invoke("Shoot", timeBetweenShots);
-    }
+}
+
 
     private void ResetShot()
     {

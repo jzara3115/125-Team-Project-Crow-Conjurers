@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     private float currentYaw;
     private float currentPitch;
 
-    void Update()
+    void LateUpdate()
     {
         float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
         float mouseY = -Input.GetAxis("Mouse Y") * rotationSpeed;
