@@ -18,6 +18,8 @@ public class EnemyAI : MonoBehaviour
     private float shootTimer;
     private int currentBehavior;
 
+    public GameObject explosionPrefab;
+
     private int HP = 100;
     public Slider healthBar;
 
@@ -193,10 +195,15 @@ public class EnemyAI : MonoBehaviour
     }
 
     void Die()
+{
+    if (explosionPrefab != null)
     {
-        Destroy(gameObject); 
-        
+        Debug.Log("Explosion prefab instantiated!");
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
     }
+
+    Destroy(gameObject); // Destroy the enemy after spawning the explosion
+}
 
     int GetWeightedRandom(int[] weights)
     {

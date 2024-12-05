@@ -115,13 +115,24 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other)
+{
+    if (other.gameObject.CompareTag("Ring"))
     {
-        if (other.gameObject.CompareTag("Ring"))
+        GameManager.Instance.NumHoops++;
+
+        // Check if the player has collected 10 rings
+        if (GameManager.Instance.NumHoops >= 3)
         {
-            GameManager.Instance.NumHoops++;
-            Destroy(other.transform.parent.gameObject);
+            // Change to the desired scene (replace "SceneName" with your scene name or index)
+            SceneManager.LoadScene("Module 8");
+            // Or if using scene index:
+            // SceneManager.LoadScene(5); // Replace 5 with the appropriate scene index
         }
+
+        Destroy(other.transform.parent.gameObject);
     }
+}
+
 
     void OnCollisionEnter(Collision other)
     {
