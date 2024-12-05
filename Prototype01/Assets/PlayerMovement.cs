@@ -156,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Destroy the bullet after 3 seconds
         Destroy(currentBullet, 3f);
-        Debug.Log("Destroying bullet: " + currentBullet.name);
+        //Debug.Log("Destroying bullet: " + currentBullet.name);
         Destroy(currentBullet, 3f);
 
         if (muzzleFlash != null)
