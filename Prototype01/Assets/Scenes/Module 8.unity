@@ -539,6 +539,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e9433e43935478f4a939f7e4137e9b2e, type: 3}
   m_PrefabInstance: {fileID: 47418173}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &51795597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3619642083614163389, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_Name
+      value: Proto_Stunt_Course_Ring_Small_01_Atlased (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 327.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 171
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.13803211
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00030603076
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.989839
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.034143817
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -195.894
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.507
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
 --- !u!1001 &69373329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -954,6 +1011,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &213593482
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3619642083614163389, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_Name
+      value: Proto_Stunt_Course_Ring_Small_01_Atlased (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 281.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 134.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.339962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.015666898
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9398191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.030338805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -140.244
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.507
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
 --- !u!1001 &227237545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3650,6 +3764,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8b9f6cf8c3bf7ef4c9d21174bb21a656, type: 3}
   m_PrefabInstance: {fileID: 573769965}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &596113318
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3619642083614163389, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_Name
+      value: Proto_Stunt_Course_Ring_Small_01_Atlased (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 251.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 122.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7626785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.028690161
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.64587593
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.018514056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -80.536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.507
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
 --- !u!1001 &598942241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5203,6 +5374,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8dff6808fe20a8740a52feec2eb6fe65, type: 3}
   m_PrefabInstance: {fileID: 810543531}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &834206702
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3619642083614163389, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_Name
+      value: Proto_Stunt_Course_Ring_Small_01_Atlased (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 203.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -21.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 159.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.339962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.015666898
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9398191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.030338805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -140.244
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.507
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
 --- !u!1001 &843735765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8566,6 +8794,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 361128779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1191089110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3619642083614163389, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_Name
+      value: Proto_Stunt_Course_Ring_Small_01_Atlased (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 315.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 122.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.81456184
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.12140913
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.543612
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.16197135
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 1.243
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -67.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -23.326
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
 --- !u!1001 &1196336971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8678,6 +8963,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c9c1c6b4df1b6c34a81f5fa97630b07e, type: 3}
   m_PrefabInstance: {fileID: 1196336971}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1203234108
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3619642083614163389, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_Name
+      value: Proto_Stunt_Course_Ring_Small_01_Atlased (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 179.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -21.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 123.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7036949
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.026973577
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7096814
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0209361
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.503
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.507
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
 --- !u!1001 &1203777106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11187,6 +11529,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}
   ammunitionDisplay: {fileID: 0}
   allowInvoke: 1
+  healthBar: {fileID: 0}
 --- !u!136 &1522697773
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14956,6 +15299,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 361128779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2136558434
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3619642083614163389, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_Name
+      value: Proto_Stunt_Course_Ring_Small_01_Atlased (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 280.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 171.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5951825
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.023708744
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8028649
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.02457212
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -106.916
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138911276444211975, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.507
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4302f84a93eb8da4eb19f544e23dceb2, type: 3}
 --- !u!4 &1640719485441146698
 Transform:
   m_ObjectHideFlags: 0
@@ -15173,3 +15573,10 @@ SceneRoots:
   - {fileID: 206504552}
   - {fileID: 1522697776}
   - {fileID: 361128779}
+  - {fileID: 596113318}
+  - {fileID: 213593482}
+  - {fileID: 834206702}
+  - {fileID: 1203234108}
+  - {fileID: 2136558434}
+  - {fileID: 51795597}
+  - {fileID: 1191089110}
