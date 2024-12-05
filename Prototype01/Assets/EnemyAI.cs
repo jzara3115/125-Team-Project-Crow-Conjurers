@@ -51,23 +51,21 @@ public class EnemyAI : MonoBehaviour
 
         if (behaviorTimer <= 0f)
         {
-            currentBehavior = Random.Range(0, 3);
+            currentBehavior = Random.Range(0, 10);
             behaviorTimer = behaviorSwitchInterval;
             behaviorStartPos = transform.position;
         }
 
-        switch (currentBehavior)
+        if (currentBehavior < 2)
         {
-            case 0:
-                MoveUpAndDown();
-                break;
-            case 1:
-                MoveLeftAndRight();
-                break;
-            case 2:
-                FollowPlayer();
-                break;
-        }
+            MoveUpAndDown();
+        } else if(currentBehavior < 4)
+        {
+            MoveLeftAndRight();
+        } else
+        {
+            FollowPlayer();
+        }   
 
         if (shootTimer <= 0f)
         {
