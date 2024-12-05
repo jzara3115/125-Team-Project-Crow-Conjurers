@@ -36,6 +36,12 @@ public class EnemyAI : MonoBehaviour
         behaviorTimer = behaviorSwitchInterval;
         shootTimer = shootDecisionInterval;
         currentBehavior = Random.Range(0, 3);
+
+        if (healthBar != null)
+        {
+            healthBar.maxValue = HP;
+            healthBar.value = HP;
+        }
     }
 
     void Update()
@@ -69,7 +75,10 @@ public class EnemyAI : MonoBehaviour
             shootTimer = shootDecisionInterval;
         }
 
-        healthBar.value = HP;
+        if (healthBar != null)
+        {
+            healthBar.value = HP;
+        }
     }
 
     void MoveUpAndDown()
@@ -153,7 +162,7 @@ public class EnemyAI : MonoBehaviour
         Vector3 targetPosition = player.position + offset;
         Vector3 direction = (targetPosition - transform.position).normalized;
 
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, transform.position + transform.forward, Quaternion.identity);
 
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         if (bulletRb != null)
@@ -163,7 +172,33 @@ public class EnemyAI : MonoBehaviour
 
         // Destroy the bullet after 3 seconds
         Destroy(bullet, 3f);
-}
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PlayerBullet"))
+        {
+            HP -= 10; // Reduce HP by 20
+            if (healthBar != null)
+            {
+                healthBar.value = HP; // Update health bar
+                Debug.Log("Enemy hit!");
+
+            }
+
+            Destroy(other.gameObject); // Destroy the bullet
+            if (HP <= 0)
+            {
+                Die();
+            }
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject); // Destroy the enemy
+        // Optionally add death effects here
+    }
 
     int GetWeightedRandom(int[] weights)
     {
