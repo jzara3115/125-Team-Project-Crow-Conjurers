@@ -1,6 +1,8 @@
 using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public bool allowInvoke = true;
 
     private Rigidbody rb;
+
+    private int HP = 100;
+    public Slider healthBar;
 
     private void Awake()
     {
@@ -50,6 +55,11 @@ public class PlayerMovement : MonoBehaviour
                 bulletRenderer.enabled = false;
             }
         }
+        if (healthBar != null)
+        {
+            healthBar.maxValue = HP;
+            healthBar.value = HP;
+        }
     }
 
     void Update()
@@ -60,6 +70,10 @@ public class PlayerMovement : MonoBehaviour
         if (ammunitionDisplay != null)
         {
             ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
+        }
+        if (healthBar != null)
+        {
+            healthBar.value = HP;
         }
     }
 
@@ -106,6 +120,29 @@ public class PlayerMovement : MonoBehaviour
         {
             GameManager.Instance.NumHoops++;
             Destroy(other.transform.parent.gameObject);
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("Collision");
+        if (other.gameObject.CompareTag("EnemyBullet"))
+        {
+            HP -= 10;
+            if (healthBar != null)
+            {
+                healthBar.value = HP;
+                Debug.Log("Player hit!");
+
+            }
+
+            Destroy(other.gameObject);
+            if (HP <= 0)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                SceneManager.LoadScene(4); ;
+            }
         }
     }
 
