@@ -69,16 +69,18 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void HandleRotation()
-    {
-        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
-        yaw += mouseX;
+{
+    float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
+    yaw += mouseX;
 
-        float verticalInput = Input.GetAxis("Vertical");
-        pitch += verticalInput;
-        pitch = Mathf.Clamp(pitch, -90, 90f);
+    float lookUpSpeed = 2.5f; 
+    float verticalInput = Input.GetAxis("Vertical") * lookUpSpeed;
+    pitch += verticalInput;
+    pitch = Mathf.Clamp(pitch, -90, 90f);
 
-        transform.rotation = Quaternion.Euler(pitch / 2 + 90f, yaw, 0f);
-    }
+    transform.rotation = Quaternion.Euler(pitch / 2 + 90f, yaw, 0f);
+}
+
 
     private void HandleMovement()
     {
@@ -154,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
 
-        // Destroy the bullet after 3 seconds
+        
         Destroy(currentBullet, 3f);
         //Debug.Log("Destroying bullet: " + currentBullet.name);
         Destroy(currentBullet, 3f);

@@ -86,7 +86,7 @@ public class EnemyAI : MonoBehaviour
         float newY = behaviorStartPos.y + Mathf.Sin(Time.time * speed) * verticalAmplitude;
         Vector3 newPosition = new Vector3(transform.position.x, newY, transform.position.z);
 
-        FaceDirection(newPosition - transform.position); // Update facing direction
+        FaceDirection(newPosition - transform.position); 
         transform.position = newPosition;
     }
 
@@ -95,7 +95,7 @@ public class EnemyAI : MonoBehaviour
         float newX = behaviorStartPos.x + Mathf.Sin(Time.time * speed) * horizontalAmplitude;
         Vector3 newPosition = new Vector3(newX, transform.position.y, transform.position.z);
 
-        FaceDirection(newPosition - transform.position); // Update facing direction
+        FaceDirection(newPosition - transform.position); 
         transform.position = newPosition;
     }
 
@@ -105,14 +105,14 @@ public class EnemyAI : MonoBehaviour
         {
             Vector3 direction = (player.position - transform.position).normalized;
 
-            FaceDirection(direction); // Update facing direction
+            FaceDirection(direction); 
             transform.position += direction * speed * Time.deltaTime;
         }
     }
 
     void FaceDirection(Vector3 direction)
     {
-        if (direction.magnitude > 0.01f) // Avoid rotating to a zero vector
+        if (direction.magnitude > 0.01f) 
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
@@ -170,7 +170,7 @@ public class EnemyAI : MonoBehaviour
             bulletRb.velocity = direction * bulletSpeed;
         }
 
-        // Destroy the bullet after 3 seconds
+        
         Destroy(bullet, 3f);
     }
 
@@ -178,15 +178,15 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.CompareTag("PlayerBullet"))
         {
-            HP -= 10; // Reduce HP by 20
+            HP -= 10; 
             if (healthBar != null)
             {
-                healthBar.value = HP; // Update health bar
+                healthBar.value = HP; 
                 Debug.Log("Enemy hit!");
 
             }
 
-            Destroy(other.gameObject); // Destroy the bullet
+            Destroy(other.gameObject); 
             if (HP <= 0)
             {
                 Die();
@@ -196,8 +196,8 @@ public class EnemyAI : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject); // Destroy the enemy
-        // Optionally add death effects here
+        Destroy(gameObject); 
+        
     }
 
     int GetWeightedRandom(int[] weights)
